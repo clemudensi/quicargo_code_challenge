@@ -2,6 +2,7 @@
 
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
+const { customColors } = require('./src/consts');
 
 module.exports = {
   purge: {
@@ -11,6 +12,10 @@ module.exports = {
       "./public/*.html",
       "./src/**/*.js",
       "./src/*.js",
+      "./src/**/*.tsx",
+      "./src/*.tsx",
+      "./src/**/*.ts",
+      "./src/*.ts",
       "./src/**/*.html",
       "./src/*.html",
       "./public/**/*.js",
@@ -24,7 +29,17 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      ...customColors
     },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'primary': '#000050',
+      'secondary': '#54595F',
+     }),
+     textColor: theme => ({
+      ...theme('colors'),
+      ...customColors
+     }),
     extend: {},
   },
   variants: [

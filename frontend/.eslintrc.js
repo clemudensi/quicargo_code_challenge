@@ -1,4 +1,4 @@
-module.exports = exports = {
+module.exports = {
     extends: [
         'react-app',
         'eslint:recommended',
@@ -11,15 +11,17 @@ module.exports = exports = {
         es6: true,
         jest: true,
     },
+    parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: 2020,
         project: "tsconfig.json",
-    tsconfigRootDir: __dirsname,
-    sourceType: "module",
+        tsconfigRootDir: __dirname,
+        sourceType: "module",
         ecmaFeatures: {
             jsx: true,
         },
     },
+    ignorePatterns: ["/*.*"],
     rules: {
         '@typescript-eslint/no-unsafe-member-access': 1,
         '@typescript-eslint/no-unsafe-assignment': 1,

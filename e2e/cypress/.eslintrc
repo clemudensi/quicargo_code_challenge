@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "plugin:cypress/recommended",
-    "plugin:json/recommended"
-  ],
-  "env": {
-    "cypress/globals": true
-  }
-}
