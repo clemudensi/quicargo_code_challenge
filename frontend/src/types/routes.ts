@@ -1,6 +1,7 @@
 import { VFC } from 'react';
 
 type Route =
+    '/' |
     '/new-delivery' |
     '/deliveries' |
     '/history';

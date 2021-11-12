@@ -1,7 +1,10 @@
 import { VFC } from 'react';
 import { NavBar } from '../../types';
-import { Dropdown } from '../dropdown/dropdown';
+import { Dropdown } from '../dropdown';
 import { USER_DROP_DOWN } from '../../consts';
+import userAvatar from '../../assets/img/User-avatar.png';
+import { Avatar } from '../avatar/avatar';
+import { UserDropDown } from '../dropdown';
 
 const Navbar: VFC<NavBar> = ({
 	title,
@@ -22,7 +25,11 @@ const Navbar: VFC<NavBar> = ({
 					</a>
 
 					<ul className="flex-col md:flex-row list-none items-center hidden md:flex">
-						<Dropdown dropdownItems={USER_DROP_DOWN} />
+						<Dropdown
+							container={<Avatar userAvatar={userAvatar} />}
+							list={<UserDropDown dropdownItems={USER_DROP_DOWN} />}
+						>
+						</Dropdown>
 					</ul>
 				</div>
 			</nav>

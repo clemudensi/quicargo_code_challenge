@@ -26,8 +26,6 @@
     "experimentalDecorators": true,
     "noImplicitAny": false
   },
-  "include": [
-    "src"
-  ],
-  "exclude": ["src/**/*.js", "src/**/*.jsx", "node_modules", "build"]
+  "exclude": ["node_modules", "test", "dist", "dist/**/*spec.ts"],
+  "include": ["src/**/*", ".eslintrc.js"]
 }

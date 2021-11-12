@@ -11,7 +11,6 @@ module.exports = {
         es6: true,
         jest: true,
     },
-    parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: 2020,
         project: "tsconfig.json",

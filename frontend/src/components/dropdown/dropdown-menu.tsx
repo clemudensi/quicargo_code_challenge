@@ -1,17 +1,11 @@
-import { createRef, useState, VFC } from 'react';
+import { createRef, useState, FC } from 'react';
 import { createPopper } from '@popperjs/core';
-import userAvatar from '../../assets/img/User-avatar.png';
-import { Avatar } from '../avatar/avatar';
 
 type DropdownItem = {
-    dropdownItems: {
-        name: string;
-        url: string;
-    }[];
+    container?: JSX.Element;
+    list: JSX.Element;
 };
-
-const Dropdown: VFC<DropdownItem> = ({ dropdownItems }) => {
-    // dropdown props
+const Dropdown: FC<DropdownItem> = ({ container, list }) => {
     const [dropdownPopoverShow, setDropdownPopoverShow] = useState(false);
     const btnDropdownRef: React.RefObject<HTMLAnchorElement> = createRef();
     const popoverDropdownRef: React.RefObject<HTMLDivElement> = createRef();
@@ -41,7 +35,7 @@ const Dropdown: VFC<DropdownItem> = ({ dropdownItems }) => {
                         : openDropdownPopover();
                 }}
             >
-                <Avatar userAvatar={userAvatar} />
+                {container}
             </a>
             <div
                 ref={popoverDropdownRef}
@@ -50,18 +44,7 @@ const Dropdown: VFC<DropdownItem> = ({ dropdownItems }) => {
                     'bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48'
                 }
             >
-                {dropdownItems &&
-                    dropdownItems.map((item) => (
-                        <a
-                            href={item.url}
-                            className={
-                                'text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700'
-                            }
-                            onClick={(e) => e.preventDefault()}
-                        >
-                            {item.name}
-                        </a>
-                    ))}
+                {list}
             </div>
         </>
     );

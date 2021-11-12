@@ -7,6 +7,11 @@ import {
 } from '../pages';
 
 const deliveryRouteConfigs: Record<Route, RouteConfig> = {
+    '/': {
+        title: 'Deliveries',
+        Element: NewDelivery,
+        authRoute: false,
+    },
     '/deliveries': {
         title: 'Deliveries',
         Element: Deliveries,
