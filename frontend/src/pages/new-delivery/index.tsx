@@ -22,30 +22,27 @@ const NewDelivery: VFC = () => {
             [e.target.name]: e.target.value
         });
     };
-    console.log(shipping, 'shipping')
 
     return (
-        <>
-            <div className="flex flex-wrap">
-                <div className="w-full xl:w-6/12 mb-12 pr-2">
-                    <CardContainer bgColor="bg-white" title="Routes">
-                        <RouteForm onChangeFunc={onChange} />
-                    </CardContainer>
-                    <CardContainer bgColor="bg-white" title="Freight-container">
-                        <FreightDetails onChangeFunc={onChange} />
-                    </CardContainer>
-                    <CardContainer  bgColor="bg-white" title="Date & Time">
-                        <DeliveryDateTime onChangeFunc={onChange} />
-                    </CardContainer>
-                </div>
-                <div className="w-full xl:w-6/12 px-4 my-4">
-                    <MapDirection
-                        origin={getLatLng(shipping['pick-up-add'])}
-                        destination={getLatLng(shipping['delivery-add'])}
-                />
-                </div>
+        <div className="flex flex-wrap" data-test="new-delivery-page">
+            <div className="w-full xl:w-6/12 mb-12 pr-2">
+                <CardContainer bgColor="bg-white" title="Routes">
+                    <RouteForm onChangeFunc={onChange} />
+                </CardContainer>
+                <CardContainer bgColor="bg-white" title="Freight-container">
+                    <FreightDetails onChangeFunc={onChange} />
+                </CardContainer>
+                <CardContainer  bgColor="bg-white" title="Date & Time">
+                    <DeliveryDateTime onChangeFunc={onChange} />
+                </CardContainer>
             </div>
-        </>
+            <div className="w-full xl:w-6/12 px-4 my-4">
+                <MapDirection
+                    origin={getLatLng(shipping['pick-up-add'])}
+                    destination={getLatLng(shipping['delivery-add'])}
+                />
+            </div>
+        </div>
     )
 };
 

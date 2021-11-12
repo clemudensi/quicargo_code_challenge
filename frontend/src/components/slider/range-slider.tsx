@@ -7,26 +7,24 @@ const Range = createSliderWithTooltip(Slider.Range) as React.ElementType;
 
 const RangeSlider: VFC = () => {
     return (
-        <>
-            <Range
-                marks={{
-                    0: '00:00',
-                    1399: '23:59'
-                }}
-                min={0}
-                max={1440}
-                defaultValue={[480, 1110]}
-                tipFormatter={(value) =>
-                    `${Math.floor(value/60) > 9 ? Math.floor(value/60) :
-                        `0${Math.floor(value/60)}`} : ${value % 60 > 9 ?
-                            value % 60 : `0${value % 60}`}`
-                }
-                tipProps={{
-                    placement: "top",
-                    visible: true
-                }}
-            />
-        </>
+        <Range
+            marks={{
+                0: '00:00',
+                1399: '23:59'
+            }}
+            min={0}
+            max={1440}
+            defaultValue={[480, 1110]}
+            tipFormatter={(value) =>
+                `${Math.floor(value/60) > 9 ? Math.floor(value/60) :
+                    `0${Math.floor(value/60)}`} : ${value % 60 > 9 ?
+                        value % 60 : `0${value % 60}`}`
+            }
+            tipProps={{
+                placement: "top",
+                visible: true
+            }}
+        />
     )
 };
 

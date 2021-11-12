@@ -11,11 +11,23 @@ type SelectMenu = {
 
 const DropdownSelect: VFC<SelectMenu> = ({ name, options, onClickSelect }) => {
     return (
-        <select className="form-select block w-full" name={name} id={name} onChange={(e) => onClickSelect && onClickSelect(e)}>
+        <select
+            className="form-select block w-full"
+            name={name}
+            id={name}
+            onChange={(e) => onClickSelect && onClickSelect(e)}
+            data-test={`drop-down-select-${name}`}
+        >
             <option value=''>{name}</option>
             {
                 options.map((item) => (
-                    <option value={item.value} key={item.name}>{item.name}</option>
+                    <option
+                        value={item.value}
+                        key={item.name}
+                        data-test="select-option"
+                    >
+                        {item.name}
+                    </option>
                 ))
             }
         </select>

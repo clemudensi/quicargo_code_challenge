@@ -1,6 +1,6 @@
 const SIDE_BAR_LINKS = [
     {
-        name: 'New Delivery',
+        name: 'New-Delivery',
         url: '/new-delivery',
         icon: 'fa-plus'
     },

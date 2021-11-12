@@ -28,6 +28,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Improvements
 * Adding unit test for utility functions
+* Add more unit test for components
 * Implement ErrorBoundary for application
 * Create well structured data types
 * Create more reusable complement - (styled-components, MUI)
