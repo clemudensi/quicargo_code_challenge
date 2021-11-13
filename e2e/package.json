@@ -1,0 +1,20 @@
+{
+    "name": "quicargo-e2e",
+    "version": "1.0.0",
+    "description": "cypress test for quicargo",
+    "private": true,
+    "scripts": {
+        "test:quicargo": "cypress run --config-file cypress/cypress.json",
+        "test:quicargo:ui": "cypress open --config-file cypress/cypress.json"
+    },
+    "dependencies": {
+        "@babel/core": "7.0.1",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-typescript": "^7.12.13",
+        "@cypress/webpack-preprocessor": "^5.5.0",
+        "@testing-library/cypress": "^8.0.0",
+        "babel-loader": "8.0.2",
+        "cypress": "^8.7.0",
+        "webpack": "4.18.1"
+    }
+}

@@ -37,7 +37,7 @@ const MapDirection = ({ origin, destination }) => {
             center={defaultLocation}
             zoom={5}
             onLoad={map => onMapLoad(map)}
-            mapContainerStyle={{ height: "100vw", width: "39vw" }}
+            mapContainerStyle={{ height: "100vw", width: "40vw" }}
           >
             {mapPath.directions !== null && (
               <DirectionsRenderer directions={mapPath.directions} />

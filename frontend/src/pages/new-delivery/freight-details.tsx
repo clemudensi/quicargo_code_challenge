@@ -54,9 +54,7 @@ const FreightDetails: VFC<onChange> = ({ onChangeFunc }) => {
                         </div>
                         <div className="md:w-1/9 mr-4">
                             <input
-                                className="bg-gray-200 appearance-none border-2 border-gray-200
-                                w-12 py-2 px-4 text-gray-700 leading-tight focus:outline-none
-                                focus:bg-white focus:border-purple-500 mt-4"
+                                className="shadow appearance-none border w-12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
                                 type="text"
                                 name="amount"
                                 onChange={(e) => onChangeFunc(e)}
@@ -66,9 +64,7 @@ const FreightDetails: VFC<onChange> = ({ onChangeFunc }) => {
                         </div>
                         <div className="md:w-2/9 mr-4">
                             <input
-                                className="bg-gray-200 appearance-none border-2 border-gray-200
-                                w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none
-                                focus:bg-white focus:border-purple-500 mt-4"
+                                className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
                                 type="text"
                                 name="length"
                                 onChange={(e) => onChangeFunc(e)}
@@ -78,9 +74,7 @@ const FreightDetails: VFC<onChange> = ({ onChangeFunc }) => {
                         </div>
                         <div className="md:w-2/9 mr-4">
                             <input
-                                className="bg-gray-200 appearance-none border-2 border-gray-200
-                                w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none
-                                focus:bg-white focus:border-purple-500 mt-4"
+                                className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
                                 type="text"
                                 name="width"
                                 onChange={(e) => onChangeFunc(e)}
@@ -91,9 +85,7 @@ const FreightDetails: VFC<onChange> = ({ onChangeFunc }) => {
                         <div className="md:w-2/9 mr-4">
                             <input
                                 className="
-                                bg-gray-200 appearance-none border-2 border-gray-200
-                                rounded w-full py-2 px-4 text-gray-700 leading-tight
-                                focus:outline-none focus:bg-white focus:border-purple-500 mt-4"
+                                shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"
                                 type="text"
                                 name="height"
                                 onChange={(e) => onChangeFunc(e)}
@@ -114,8 +106,7 @@ const FreightDetails: VFC<onChange> = ({ onChangeFunc }) => {
                     </div>
                     <div className="md:w-2/6">
                         <input
-                            className="bg-gray-200 border-2 w-full py-2 px-4 text-gray-700
-                            leading-tight focus:outline-none focus:bg-white focus:border-indigo-900"
+                            className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="text"
                             name="weight"
                             placeholder="weight"

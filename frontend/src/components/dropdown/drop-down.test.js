@@ -27,5 +27,5 @@ describe('<DropdownSelect/>', () => {
             expect(options[1].selected).toBeTruthy();
             expect(options[2].selected).toBeFalsy();
         });
-    })
+    });
 });

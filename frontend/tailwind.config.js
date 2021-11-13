@@ -2,7 +2,6 @@
 
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
-const { customColors } = require('./src/consts');
 
 module.exports = {
   purge: {
@@ -10,16 +9,7 @@ module.exports = {
     content: [
       "./public/**/*.html",
       "./public/*.html",
-      "./src/**/*.js",
-      "./src/*.js",
-      "./src/**/*.tsx",
-      "./src/*.tsx",
-      "./src/**/*.ts",
-      "./src/*.ts",
-      "./src/**/*.html",
-      "./src/*.html",
-      "./public/**/*.js",
-      "./public/*.js",
+      "./src/**/*.{js,ts,jsx,tsx}"
     ],
     options: {
       safelist: [],
@@ -29,38 +19,25 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      ...customColors
     },
-    backgroundColor: theme => ({
-      ...theme('colors'),
-      'primary': '#000050',
-      'secondary': '#54595F',
-     }),
-     textColor: theme => ({
-      ...theme('colors'),
-      ...customColors
-     }),
     extend: {},
   },
   variants: [
-    'first',
-    'last',
-    'odd',
-    'even',
-    'visited',
-    'checked',
-    'group-hover',
-    'group-focus',
-    'focus-within',
-    'hover',
-    'focus',
-    'focus-visible',
-    'active',
-    'disabled',
+    "responsive",
+    "group-hover",
+    "focus-within",
+    "first",
+    "last",
+    "odd",
+    "even",
+    "hover",
+    "focus",
+    "active",
+    "visited",
+    "disabled",
   ],
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/forms"),
     plugin(function ({ addComponents }) {
       addComponents([
         {

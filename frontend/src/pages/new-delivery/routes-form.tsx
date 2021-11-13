@@ -18,9 +18,7 @@ const RouteForm: VFC<onChange> = ({ onChangeFunc }) => {
                     </div>
                     <div className="md:w-3/6">
                         <input
-                            className="bg-gray-200 appearance-none border-2 border-gray-200 w-full
-                            py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white
-                            focus:border-purple-500"
+                            className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="text" name="pick-up-add" onChange={(e) => {onChangeFunc(e)}}
                             data-test="pick-up-add"
                         />
@@ -36,9 +34,8 @@ const RouteForm: VFC<onChange> = ({ onChangeFunc }) => {
                     <DropdownSelect name="delivery-city" options={ROUTE_PICK_UP} onClickSelect={onChangeFunc} />
                     </div>
                     <div className="md:w-3/6">
-                        <input className="bg-gray-200 appearance-none border-2 border-gray-200 w-full
-                            py-2 px-4 text-gray-700 leading-tight focus:outline-none
-                            focus:bg-white focus:border-purple-500"
+                        <input
+                            className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="text" name="delivery-add"
                             onChange={(e) => {onChangeFunc(e)}}
                             data-test="delivery-add"

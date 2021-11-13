@@ -14,9 +14,7 @@ const DeliveryDateTime: VFC<onChange> = ({ onChangeFunc }) => {
                     </div>
                     <div className="md:w-2/6 mr-6">
                         <input
-                            className="bg-gray-200 appearance-none border-2 border-gray-200 w-full
-                            py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white
-                            focus:border-purple-500"
+                            className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="date" name="pick-up-date" onChange={(e) => onChangeFunc(e)}
                             data-test="pick-up-date"
                         />
@@ -34,9 +32,7 @@ const DeliveryDateTime: VFC<onChange> = ({ onChangeFunc }) => {
                     </div>
                     <div className="md:w-2/6 mr-6">
                         <input
-                            className="bg-gray-200 appearance-none border-2 border-gray-200 w-full
-                            py-2 px-4 text-gray-700 leading-tight focus:outline-none
-                            focus:bg-white focus:border-purple-500"
+                            className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             type="date" name="delivery-date"
                             onChange={(e) => onChangeFunc(e)}
                             data-test="delivery-date"
